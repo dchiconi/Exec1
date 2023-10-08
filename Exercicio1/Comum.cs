@@ -2,7 +2,8 @@
 using OpenQA.Selenium;
 using System;
 using System.Configuration;
-
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Exercicio1
 {
@@ -48,6 +49,20 @@ namespace Exercicio1
             }
 
         }
+        public List<IWebElement> BuscaListaElementos(IWebDriver dr, By by)
+        {
+            List<IWebElement> webElement = new List<IWebElement>();
+            try
+            {
+                webElement = dr.FindElements(by).ToList();
+                return webElement;
+            }
+            catch (Exception ex)
+            {
+                return webElement;
+            }
+
+        }
         public bool DigitarTexto(IWebDriver dr, By by, string texto)
         {
             try
@@ -68,6 +83,7 @@ namespace Exercicio1
             {
                 IWebElement webElement = dr.FindElement(by);
                 webElement.Click();
+                System.Threading.Thread.Sleep(1000);
                 return true;
             }
             catch (Exception ex)

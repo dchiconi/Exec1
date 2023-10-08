@@ -63,6 +63,8 @@
     <Compile Include="Comum.cs" />
     <Compile Include="ComumTestes.cs" />
     <Compile Include="TesteBotaoVerde .cs" />
+    <Compile Include="TesteBotoesDelete.cs" />
+    <Compile Include="TesteBotoesEdit .cs" />
     <Compile Include="TesteBotaoVermelho .cs" />
     <Compile Include="TesteBotaoAzul.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
